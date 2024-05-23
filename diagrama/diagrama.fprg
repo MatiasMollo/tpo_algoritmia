@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Matias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-21 05:34:54 p.&#160;m."/>
+        <attribute name="created" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTIxOzA0OjQ3OjA1IHAuwqBtLjszMjA3"/>
+        <attribute name="edited" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTIxOzA1OjM0OjU0IHAuwqBtLjs5OzMzMjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="imprimirOpciones" type="None" variable="">
+        <parameters>
+            <parameter name="array" type="String" array="True"/>
+        </parameters>
+        <body>
+            <for variable="i" start="0" end="len(array)" direction="inc" step="1">
+                <output expression="array[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="inicializarJugador" type="None" variable="">
+        <parameters>
+            <parameter name="jugadores" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="ocupado" type="Boolean" array="False" size=""/>
+            <assign variable="ocupado" expression="True"/>
+            <declare name="nombre" type="String" array="False" size=""/>
+            <while expression="ocupado == True">
+                <assign variable="ocupado" expression="False"/>
+                <input variable="nombre"/>
+                <for variable="i" start="0" end="len(jugadores)" direction="inc" step="1">
+                    <if expression="jugadores[i] == nombre">
+                        <then>
+                            <output expression="&quot;Ese nombre de usuario ya est&#225; en uso&quot;" newline="True"/>
+                            <assign variable="ocupado" expression="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </while>
+            <output expression="&quot;Jugador &quot; + len(jugadores) + 1" newline="True"/>
+            <call expression="jugadores.append(nombre)"/>
+            <call expression="puntos.append(0)"/>
+        </body>
+    </function>
+    <function name="jugar" type="None" variable="">
+        <parameters>
+            <parameter name="indexCategoria" type="Integer" array="False"/>
+            <parameter name="jugadores" type="String" array="True"/>
+            <parameter name="puntos" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <declare name="opciones" type="String" array="True" size="sinLimite"/>
+            <declare name="respuestas" type="String" array="True" size="sinLimite"/>
+            <assign variable="contador" expression="0"/>
+            <declare name="respuesta" type="String" array="False" size=""/>
+            <call expression="opciones = obtenerOpciones(indexCategoria)"/>
+            <call expression="respuestas = obtenerRespuestas(indexCategoria)"/>
+            <output expression="&quot;categoria: &quot; + NOMBRES_CATEGORIAS[indexCategoria - 1]" newline="True"/>
+            <while expression="contador &lt; CANTIDAD_PREGUNTAS">
+                <output expression="CATEGORIAS[indexCategoria - 1][contador]" newline="True"/>
+                <call expression="imprimirOpciones(opciones[contador])"/>
+                <input variable="respuesta"/>
+                <while expression="not validar(respuesta,['a','b','c','d'])">
+                    <output expression="&quot;Opci&#243;n incorrecta, intenta nuevamente&quot;" newline="True"/>
+                    <input variable="respuesta"/>
+                </while>
+                <if expression="respuesta == respuestas[contador]">
+                    <then>
+                        <output expression="&quot;Respuesta correcta&quot;" newline="True"/>
+                        <assign variable="puntos[len(jugadores)-1]" expression="puntos[len(jugadores)-1) + 1"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Respuesta incorrecta&quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Puntos: &quot; + puntos[len(jugadores) - 1]" newline="True"/>
+                <assign variable="contador" expression="contador + 1"/>
+            </while>
+        </body>
+    </function>
+    <function name="mostrarPuntaje" type="None" variable="">
+        <parameters>
+            <parameter name="jugadores" type="String" array="True"/>
+            <parameter name="puntos" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="aux" type="Integer" array="False" size=""/>
+            <assign variable="aux" expression="0"/>
+            <comment text="Ordenado de puntajes y jugadores"/>
+            <for variable="i" start="0" end="len(puntos)" direction="inc" step="1">
+                <for variable="x" start="0" end="len(puntos)" direction="inc" step="1">
+                    <if expression="puntos[x] &lt; puntos[i]">
+                        <then>
+                            <assign variable="aux" expression="puntos[x]"/>
+                            <assign variable="puntos[x]" expression="puntos[i]"/>
+                            <assign variable="puntos[i]" expression="aux"/>
+                            <assign variable="aux" expression="jugadores[x]"/>
+                            <assign variable="jugadores[x]" expression="jugadores[i]"/>
+                            <assign variable="jugadores[i]" expression="aux"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Tabla de posiciones&quot;" newline="True"/>
+            <for variable="i" start="0" end="len(jugadores)" direction="inc" step="1">
+                <output expression="&quot;Jugador N&#176;&quot; + (i+1) + &quot; - &quot; + jugadores[i] + &quot; con &quot; + puntos[i] + &quot;puntos&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="obtenerOpciones" type="String" variable="preguntas">
+        <parameters>
+            <parameter name="categoria" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="preguntas" type="String" array="False" size=""/>
+            <if expression="categoria == 1">
+                <then>
+                    <assign variable="preguntas" expression="opciones_deportes"/>
+                </then>
+                <else>
+                    <if expression="categoria == 2">
+                        <then>
+                            <assign variable="preguntas" expression="opciones_musica"/>
+                        </then>
+                        <else>
+                            <if expression="categoria == 3">
+                                <then>
+                                    <assign variable="preguntas" expression="opcinoes_historia"/>
+                                </then>
+                                <else>
+                                    <assign variable="preguntas" expression="opciones_tecnologia"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="obtenerRespuestas" type="String" variable="respuestas">
+        <parameters>
+            <parameter name="categoria" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="respuestas" type="String" array="False" size=""/>
+            <if expression="categoria == 1">
+                <then>
+                    <assign variable="respuestas" expression="respuestas_deportes"/>
+                </then>
+                <else>
+                    <if expression="categoria == 2">
+                        <then>
+                            <assign variable="respuestas" expression="opciones_musica"/>
+                        </then>
+                        <else>
+                            <if expression="categoria == 3">
+                                <then>
+                                    <assign variable="respuestas" expression="respuestas_historia"/>
+                                </then>
+                                <else>
+                                    <assign variable="respuestas" expression="respuestas_tecnologia"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="validar" type="Boolean" variable="validado">
+        <parameters>
+            <parameter name="input" type="String" array="False"/>
+            <parameter name="array" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="validado" type="Boolean" array="False" size=""/>
+            <assign variable="validado" expression="False"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="not validado and i &lt; len(array)">
+                <if expression="array[i] == input">
+                    <then>
+                        <assign variable="validado" expression="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

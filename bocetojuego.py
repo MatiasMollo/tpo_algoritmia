@@ -13,7 +13,7 @@ opciones_musica = [
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"]
-    ]
+]
 respuestas_musica = ["a","b","c"]
 
 historia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
@@ -21,7 +21,7 @@ opciones_historia = [
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"]
-    ]
+]
 respuestas_historia = ["a","b","c"]
 
 tecnologia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
@@ -29,7 +29,7 @@ opciones_tecnologia = [
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
     ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"]
-    ]
+]
 respuestas_tecnologia = ["a","b","c"]
 
 NOMBRES_CATEGORIAS = ["Deportes","Música","Historia","Tecnología"]
@@ -146,7 +146,6 @@ def jugar(indexCategoria,jugadores,puntos):
 
 #Devuelve un array con los indices de los mejores puntajes
 def mostrarPuntaje(jugadores,puntos):
-    puntos
     aux = 0
 
     #Ordenado de puntajes y jugadores
@@ -167,6 +166,8 @@ def mostrarPuntaje(jugadores,puntos):
     for i in range(len(jugadores)):
         print((i + 1),"-",jugadores[i],"con",puntos[i],"puntos")
 
+
+#Programa principal
 continuar = True
 while continuar:
     print()
