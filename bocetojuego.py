@@ -1,6 +1,6 @@
 import random
 
-deportes = ["1. ¿Quién fue el máximo goleador del Mundial Italia 1990? ", "2. ¿Cuántos Balones de Oro ha ganado Lionel Messi? ", "3. ¿Cuántos anillos de campeón logró Michael Jordan en la NBA? "]
+deportes = ["1. ¿Quién fue el máximo goleador del Mundial Italia 1990?", "2. ¿Cuántos Balones de Oro ha ganado Lionel Messi?", "3. ¿Cuántos anillos de campeón logró Michael Jordan en la NBA?", "4. ¿A quién le pertenece el récord de más victorias en el Masters de Augusta de golf?", "5. ¿Qué equipo ha ganado más Stanley Cups en la NHL?", "6. ¿Quién ganó el Campeonato Mundial de Pilotos de Fórmula 1 2016?", "7. ¿En qué año los New Orleans Saints ganaron el Super Bowl?", "8. ¿Quién es el jugador japonés con más hits de por vida en la MLB?", "9. ¿Cuántos Abiertos de Francia ganó Björn Borg?", "10. ¿Quién es el máximo goleador de la selección de fútbol de Inglaterra?"]
 opciones_deportes = [
     ["a. Gaetano Scirea", "b. Hristo Stoichkov", "c. Salvatore Schillaci", "d. Neymar"],
     ["a. 9", "b. 8", "c. 7", "d. 4"], 
