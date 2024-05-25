@@ -1,20 +1,34 @@
 import random
 
-deportes = ["1. ¿Quién fue el máximo goleador del Mundial Italia 1990?", "2. ¿Cuántos Balones de Oro ha ganado Lionel Messi?", "3. ¿Cuántos anillos de campeón logró Michael Jordan en la NBA?", "4. ¿A quién le pertenece el récord de más victorias en el Masters de Augusta de golf?", "5. ¿Qué equipo ha ganado más Stanley Cups en la NHL?", "6. ¿Quién ganó el Campeonato Mundial de Pilotos de Fórmula 1 2016?", "7. ¿En qué año los New Orleans Saints ganaron el Super Bowl?", "8. ¿Quién es el jugador japonés con más hits de por vida en la MLB?", "9. ¿Cuántos Abiertos de Francia ganó Björn Borg?", "10. ¿Quién es el máximo goleador de la selección de fútbol de Inglaterra?"]
+deportes = ['1. ¿Quién fue el máximo goleador del Mundial Italia 1990?', '2. ¿Cuántos Balones de Oro ha ganado Lionel Messi?', '3. ¿Cuántos anillos de campeón logró Michael Jordan en la NBA?', '4. ¿A quién le pertenece el récord de más victorias en el Masters de Augusta de golf?', '5. ¿Qué equipo ha ganado más Stanley Cups en la NHL?', '6. ¿Quién ganó el Campeonato Mundial de Pilotos de Fórmula 1 2016?', '7. ¿En qué año los New Orleans Saints ganaron el Super Bowl?', '8. ¿Quién es el jugador japonés con más hits de por vida en la MLB?', '9. ¿Cuántos Abiertos de Francia ganó Björn Borg?', '10. ¿Quién es el máximo goleador de la selección de fútbol de Inglaterra?']
 opciones_deportes = [
-    ["a. Gaetano Scirea", "b. Hristo Stoichkov", "c. Salvatore Schillaci", "d. Neymar"],
-    ["a. 9", "b. 8", "c. 7", "d. 4"], 
-    ["a. 6", "b. 5", "c. 11", "d. 3"]
+    ['a. Gaetano Scirea', 'b. Hristo Stoichkov', 'c. Salvatore Schillaci', 'd. Neymar'],
+    ['a. 9', 'b. 8', 'c. 7', 'd. 4'], 
+    ['a. 6', 'b. 5', 'c. 11', 'd. 3'],
+    ['a. Jack Nicklaus', 'b. Gary Player', 'c. Tiger Woods', 'd. Jordan Spieth'],
+    ['a. Chicago Blackhawks', 'b. Toronto Maple Leafs', 'c. Detroit Red Wings', 'd. Montréal Canadiens'],
+    ['a. Lewis Hamilton', 'b. Max Verstappen', 'c. Kimi Raikkonen', 'd. Nico Rosberg'],
+    ['a. 2008', 'b. 2009', 'c. 2011', 'd. 2010'],
+    ['a. Shohei Ohtani', 'b. Hideki Matsui', 'c. Ichiro Suzuki', 'd. Kazuo Matsui'],
+    ['a. 4', 'b. 9', 'c. 2', 'd. 6'],
+    ['a. David Beckham', 'b. Harry Kane', 'c. Michael Owen', 'd. Wayne Rooney']
 ]
-respuestas_deportes = ["c", "b", "a"]
+respuestas_deportes = ['c', 'b', 'a', 'a', 'd', 'd', 'd', 'c', 'd', 'b']
 
-musica = ["Pregunta 1","Pregunta 2","Pregunta 3"]
+musica = ['1. ¿"Unison" de Björk contiene una muestra de qué canción de Oval?', '2. ¿Artis Leon Ivey Jr. es más conocido como qué artista de rap?', '3. ¿Cuál fue el álbum debut de Rage Against the Machine?', '4. ¿Qué banda grabó el álbum "Parallel Lines"?', '5. ¿Quién es el letrista principal de la banda canadiense de rock progresivo Rush?', '6. ¿Cuál es el nombre artístico de la cantante neozelandesa Phillipa "Pip" Brown?', '7. ¿Cuántas cuerdas hay en un violonchelo?', '8. ¿Con qué famoso guitarrista colaboró Pete Townshend para un evento en la Academia Brixton en 1985?', '9. ¿"Drink the Sea" es un álbum de qué artista de música electrónica?', '10. En 2006, ¿qué banda lanzó su álbum debut "A Fever You Can’t Sweat Out"?']
 opciones_musica = [
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"]
+    ['a. Textuell', 'b. Aero Deck', 'c. do while', 'd. Panoramic'],
+    ['a. Dr. Dre', 'b. Snoop Dogg', 'c. Coolio', 'd. Lil Wayne'],
+    ['a. Evil Empire', 'b. Renegades', 'c. Battle of Los Angeles', 'd. Rage Against the Machine'],
+    ['a. Paramore', 'd. Coldplay', 'c. The Police', 'd. Blondie'],
+    ['a. Geddy Lee', 'b. Alex Lifeson', 'c. Neil Peart', 'd. John Rutsey'],
+    ['a. Ladyhawke', 'b. Kesha', 'c. Anika Moa', 'd. Lorde'],
+    ['a. 5', 'b. 6', 'c. 4', 'd. 8'],
+    ['a. Jimmy Page', 'b. David Gilmour', 'c. Eric Clapton', 'd. Mark Knopfler'],
+    ['a. Avicii', 'b. XXYYXX', 'c. Flux Pavilion', 'd. The Glitch Mob'],
+    ['a. Panic! at the Disco', 'b. My Chemical Romance', 'c. Fall Out Boy', 'd. Twenty One Pilots']
 ]
-respuestas_musica = ["a","b","c"]
+respuestas_musica = ["b", "c", "d", "d", "c", "a", "c", "b", "d", "a"]
 
 historia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
 opciones_historia = [
