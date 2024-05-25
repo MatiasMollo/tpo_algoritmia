@@ -41,22 +41,29 @@ opciones_historia = [
     ['Cinco veces', 'Dos veces', 'Una vez', 'Tres veces'],
     ['1789', '1756', '1799', '1823'],
     ['1775', '1774', '1777', '1776'],
-    ['1798', '1867', '1668', '1859']    
+    ['1798', '1867', '1668', '1859']
 ]
 respuestas_historia = ["b", "a", "d", "a", "d", "c", "b", "a", "d", "b"]
 
-tecnologia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
-opciones_tecnologia = [
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"]
+peliculas = ['1. ¿Cuál es la frase correcta para el dicho latino "Romanes Eunt Domus" en "La Vida de Brian" de Monty Python?', '2. ¿Quién dirigió las películas "Pulp Fiction", "Reservoir Dogs" y "Django Unchained"?', '3. ¿Cuál fue otro nombre sugerido para la película de 1985 "Regreso al Futuro"?', '4. ¿Cuál de estas películas NO está ambientada en Los Ángeles?', '5. ¿Qué película de 1958 fue protagonizada por Kirk Douglas y Tony Curtis como los medio hermanos Einar y Eric?', '6. En "Buscando a Nemo", ¿cómo se llamaba la madre de Nemo?', '7. En "Regreso al Futuro II", ¿a qué fecha futura acuden Marty y el Dr. Emmett Brown?', '8. ¿Quién interpretó a Batman en la película de 1997 "Batman and Robin"?', '9. ¿Cuál de los siguientes actores no desempeña un papel en la película "The Usual Suspects"?', '10. ¿Cuál es la película más antigua de Disney?']
+opciones_peliculas = [
+    ['Romans Go Home', 'Romani Ite Domum', 'Yomate Istis Homem', 'Romani Itei Domus'],
+    ['Martin Scorsese', 'Steven Spielberg', 'Quentin Tarantino', 'James Cameron'],
+    ['Hombre del espacio de Plutón', 'Un viaje en el tiempo', 'El hombre afortunado', 'Viajeros en el tiempo de Hill Valley'],
+    ['RoboCop', 'Terminator', 'Predator 2', 'Blade Runner'],
+    ['Los barcos largos', 'Los vikingos', 'Espartaco', 'Príncipe Valiente'],
+    ['Arenosa', 'Perla', 'Coral', 'Leia'],
+    ['13 de julio de 2015', '20 de julio de 2015.', '25 de enero de 2015', '21 de octubre de 2015'],
+    ['Michael Keaton', 'Val Kilmer', 'Christian Bale', 'George Clooney'],
+    ['Steve Buscemi', 'Benicio Del Toro', 'Gabriel Byrne', 'Kevin Spacey'],
+    ['Pinocho', 'Blancanieves', 'Fantasía', 'Dumbo']    
 ]
-respuestas_tecnologia = ["a","b","c"]
+respuestas_peliculas = ["b", "c", "a", "a", "b", "c", "d", "d", "a", "b"]
 
-NOMBRES_CATEGORIAS = ["Deportes","Música","Historia","Tecnología"]
+NOMBRES_CATEGORIAS = ["Deportes","Música","Historia","Películas"]
 puntos = []
 jugadores = []
-CATEGORIAS = [deportes, musica, historia, tecnologia]
+CATEGORIAS = [deportes, musica, historia, peliculas]
 
 CANTIDAD_PREGUNTAS = 3
 MAX_JUGADORES = 5
@@ -100,7 +107,7 @@ def obtenerRespuestas(categoria):
     elif categoria == 3:
         respuestas = respuestas_historia
     else:
-        respuestas = respuestas_tecnologia
+        respuestas = respuestas_peliculas
 
     return respuestas
 
@@ -113,7 +120,7 @@ def obtenerOpciones(categoria):
     elif categoria == 3:
         preguntas = opciones_historia
     else:
-        preguntas = opciones_tecnologia
+        preguntas = opciones_peliculas
     
     return preguntas
 
@@ -188,13 +195,13 @@ def mostrarPuntaje(jugadores,puntos):
 continuar = True
 while continuar:
     print()
-    print("Bienvenido/a a Juego. Puedes elegir una de cuatro categorías temáticas o dejar que el juego escoja una al azar.")
+    print("Bienvenido/a a T.P.O (Trivia Program Online). Puedes elegir una de cuatro categorías temáticas o dejar que el juego escoja una al azar.")
 
     inicializarJugador(jugadores)
 
     print("Tendrás cinco preguntas para responder. ¡Mucha suerte!")
 
-    imprimirOpciones(["1. Deportes",'2. Música','3. Historia','4. Tecnología','5. Selección al azar'])
+    imprimirOpciones(["1. Deportes",'2. Música','3. Historia','4. Películas','5. Selección al azar'])
     categoria = int(input("Ingresa tu opción: "))
 
     while not validar(categoria,[1,2,3,4,5]):
