@@ -4,13 +4,72 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Matias"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-05-21 05:34:54 p.&#160;m."/>
+        <attribute name="saved" value="2024-05-25 02:29:52 p.&#160;m."/>
         <attribute name="created" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTIxOzA0OjQ3OjA1IHAuwqBtLjszMjA3"/>
-        <attribute name="edited" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTIxOzA1OjM0OjU0IHAuwqBtLjs5OzMzMjQ="/>
+        <attribute name="edited" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTI1OzAyOjI5OjUyIHAuwqBtLjsxMDszMzY3"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
-        <body/>
+        <body>
+            <declare name="deportes" type="String" array="True" size="10"/>
+            <declare name="opciones_deportes" type="String" array="True" size="10"/>
+            <declare name="respuestas_deportes" type="String" array="True" size="10"/>
+            <declare name="musica" type="String" array="True" size="10"/>
+            <declare name="opciones_musica" type="String" array="True" size="10"/>
+            <declare name="respuestas_musica" type="String" array="True" size="10"/>
+            <declare name="historia" type="String" array="True" size="10"/>
+            <declare name="opciones_historia" type="String" array="True" size="10"/>
+            <declare name="respuestas_historia" type="String" array="True" size="10"/>
+            <declare name="tecnologia" type="String" array="True" size="10"/>
+            <declare name="opciones_tecnologia" type="String" array="True" size="10"/>
+            <declare name="respuestas_tecnologia" type="String" array="True" size="10"/>
+            <declare name="NOMBRES_CATEGORIAS" type="String" array="True" size="4"/>
+            <assign variable="NOMBRES_CATEGORIAS" expression="[&quot;Deportes&quot;,&quot;Musica&quot;,&quot;Historia&quot;,&quot;Tecnologia&quot;]"/>
+            <declare name="MAX_JUGADORES" type="Integer" array="False" size=""/>
+            <assign variable="MAX_JUGADORES" expression="5"/>
+            <declare name="puntos" type="Integer" array="True" size="MAX_JUGADORES"/>
+            <declare name="jugadores" type="String" array="True" size="MAX_JUGADORES"/>
+            <declare name="CATEGORIAS" type="String" array="True" size="4"/>
+            <assign variable="CATEGORIAS" expression="[deportes,musica,historia,tecnologia]"/>
+            <declare name="CANTIDAD_PREGUNTAS" type="Integer" array="False" size=""/>
+            <assign variable="CANTIDAD_PREGUNTAS" expression="len(deportes)"/>
+            <declare name="CAT_RANDOM" type="Integer" array="False" size=""/>
+            <assign variable="CAT_RANDOM" expression="len(categorias) + 1"/>
+            <declare name="continuar" type="Boolean" array="False" size=""/>
+            <assign variable="continuar" expression="True"/>
+            <while expression="continuar">
+                <output expression="&quot;Bienvenido al juego de trivia...&quot;" newline="False"/>
+                <call expression="inicializarJugador(jugadores)"/>
+                <output expression="&quot;Tendr&#225;s &quot; + CANTIDAD_PREGUNTAS + &quot; preguntas para responder&quot;" newline="True"/>
+                <call expression="imprimirOpciones([&quot;1. Deportes&quot;,&quot;2. M&#250;sica&quot;,&quot;3. Historia&quot;,&quot;4. Tecnolog&#237;a&quot;,&quot;5. Selecci&#243;n al azar&quot;])"/>
+                <input variable="categoria"/>
+                <while expression="not validar(categoria,[1,2,3,4])">
+                    <output expression="&quot;Categoria incorrecta, intente nuevamente&quot;" newline="True"/>
+                    <input variable="categoria"/>
+                </while>
+                <if expression="categoria == CAT_RANDOM">
+                    <then>
+                        <assign variable="categoria" expression="random.randint(1,len(CATEGORIAS))"/>
+                    </then>
+                    <else/>
+                </if>
+                <call expression="jugar(categoria,jugadores,puntos)"/>
+                <if expression="len(jugadores) &lt; MAX_JUGADORES">
+                    <then>
+                        <if expression="int(input(&quot;Desea ingresar otro jugador? Presione 1:&quot;)) != 1">
+                            <then>
+                                <assign variable="continuar" expression="False"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;Se ha llegado al limite de jugadores para esta partida&quot;" newline="True"/>
+                        <assign variable="continuar" expression="False"/>
+                    </else>
+                </if>
+            </while>
+        </body>
     </function>
     <function name="imprimirOpciones" type="None" variable="">
         <parameters>

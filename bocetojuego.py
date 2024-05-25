@@ -37,7 +37,7 @@ puntos = []
 jugadores = []
 CATEGORIAS = [deportes, musica, historia, tecnologia]
 
-CANTIDAD_PREGUNTAS = 3
+CANTIDAD_PREGUNTAS = len(deportes)
 MAX_JUGADORES = 5
 CAT_RANDOM = len(CATEGORIAS) + 1 # Opción a seleccionar para que la categoria sea random
 
@@ -167,11 +167,11 @@ def mostrarPuntaje(jugadores,puntos):
 continuar = True
 while continuar:
     print()
-    print("Bienvenido/a a Juego. Puedes elegir una de cuatro categorías temáticas o dejar que el juego escoja una al azar.")
+    print("Bienvenido/a al juego de trivia. Puedes elegir una de cuatro categorías temáticas o dejar que el juego escoja una al azar.")
 
     inicializarJugador(jugadores)
 
-    print("Tendrás cinco preguntas para responder. ¡Mucha suerte!")
+    print("Tendrás", CANTIDAD_PREGUNTAS ,"preguntas para responder. ¡Mucha suerte!")
 
     imprimirOpciones(["1. Deportes",'2. Música','3. Historia','4. Tecnología','5. Selección al azar'])
     categoria = int(input("Ingresa tu opción: "))
@@ -180,7 +180,7 @@ while continuar:
         categoria = int(input("Opción incorrecta, intente nuevamente: "))
 
     if categoria == CAT_RANDOM:
-        categoria = random.randint(1,CAT_RANDOM - 1)
+        categoria = random.randint(1,len(CATEGORIAS))
 
     jugar(categoria,jugadores,puntos)
 
