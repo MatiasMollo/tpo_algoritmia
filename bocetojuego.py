@@ -33,30 +33,30 @@ respuestas_musica = ["b", "c", "d", "d", "c", "a", "c", "b", "d", "a"]
 historia = ['1. ¿Cómo era más conocido William Frederick Cody?', '2. ¿Quién fue el presidente de Argentina en 1939?', '3. ¿Dónde se libró la Segunda Guerra Bóer en 1899?', '4. ¿Cuándo empezó la Guerra de la Independencia contra el imperio francés?', '5. ¿Cómo se llamaba la operación ofensiva alemana realizada en octubre de 1941 para tomar Moscú antes del invierno?', '6. ¿En 1939, Gran Bretaña y Francia declararon la guerra a Alemania después de invadir qué país?', '7. ¿Cuántas veces se casó Albert Einstein en su vida?', '8. ¿Cuándo comenzó la Revolución Francesa?', '9. ¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?', '10. ¿En qué año se fundó Canadá?']
 opciones_historia = [
     ['a. Billy The Kid', 'b. Buffalo Bill', 'c. Pawnee Bill', 'd. Wild Bill Hickok'],
-    ['Roberto Marcelino Ortiz', 'Agustín Pedro Justo', 'Hipólito Yrigoyen', 'Ramón Castillo'],
-    ['Argentina', 'Nepal', 'Bulgaria', 'Sudáfrica'],
-    ['1808', '1810', '1809', '1806'],
-    ['Operación Girasol', 'Operación Barbarroja', 'Case Blue', 'Operación Typhoon'],
-    ['Estonia', 'Austria', 'Polonia', 'Hungría'],
-    ['Cinco veces', 'Dos veces', 'Una vez', 'Tres veces'],
-    ['1789', '1756', '1799', '1823'],
-    ['1775', '1774', '1777', '1776'],
-    ['1798', '1867', '1668', '1859']
+    ['a. Roberto Marcelino Ortiz', 'b. Agustín Pedro Justo', 'c. Hipólito Yrigoyen', 'd. Ramón Castillo'],
+    ['a. Argentina', 'b. Nepal', 'c. Bulgaria', 'd. Sudáfrica'],
+    ['a. 1808', 'b. 1810', 'c. 1809', 'd. 1806'],
+    ['a. Operación Girasol', 'b. Operación Barbarroja', 'c. Case Blue', 'd. Operación Typhoon'],
+    ['a. Estonia', 'b. Austria', 'c. Polonia', 'd. Hungría'],
+    ['a. Cinco veces', 'b. Dos veces', 'c. Una vez', 'd. Tres veces'],
+    ['a. 1789', 'b. 1756', 'c. 1799', 'd. 1823'],
+    ['a. 1775', 'b. 1774', 'c. 1777', 'd. 1776'],
+    ['a. 1798', 'b. 1867', 'c. 1668', 'd. 1859']
 ]
 respuestas_historia = ["b", "a", "d", "a", "d", "c", "b", "a", "d", "b"]
 
 peliculas = ['1. ¿Cuál es la frase correcta para el dicho latino "Romanes Eunt Domus" en "La Vida de Brian" de Monty Python?', '2. ¿Quién dirigió las películas "Pulp Fiction", "Reservoir Dogs" y "Django Unchained"?', '3. ¿Cuál fue otro nombre sugerido para la película de 1985 "Regreso al Futuro"?', '4. ¿Cuál de estas películas NO está ambientada en Los Ángeles?', '5. ¿Qué película de 1958 fue protagonizada por Kirk Douglas y Tony Curtis como los medio hermanos Einar y Eric?', '6. En "Buscando a Nemo", ¿cómo se llamaba la madre de Nemo?', '7. En "Regreso al Futuro II", ¿a qué fecha futura acuden Marty y el Dr. Emmett Brown?', '8. ¿Quién interpretó a Batman en la película de 1997 "Batman and Robin"?', '9. ¿Cuál de los siguientes actores no desempeña un papel en la película "The Usual Suspects"?', '10. ¿Cuál es la película más antigua de Disney?']
 opciones_peliculas = [
-    ['Romans Go Home', 'Romani Ite Domum', 'Yomate Istis Homem', 'Romani Itei Domus'],
-    ['Martin Scorsese', 'Steven Spielberg', 'Quentin Tarantino', 'James Cameron'],
-    ['Hombre del espacio de Plutón', 'Un viaje en el tiempo', 'El hombre afortunado', 'Viajeros en el tiempo de Hill Valley'],
-    ['RoboCop', 'Terminator', 'Predator 2', 'Blade Runner'],
-    ['Los barcos largos', 'Los vikingos', 'Espartaco', 'Príncipe Valiente'],
-    ['Arenosa', 'Perla', 'Coral', 'Leia'],
-    ['13 de julio de 2015', '20 de julio de 2015.', '25 de enero de 2015', '21 de octubre de 2015'],
-    ['Michael Keaton', 'Val Kilmer', 'Christian Bale', 'George Clooney'],
-    ['Steve Buscemi', 'Benicio Del Toro', 'Gabriel Byrne', 'Kevin Spacey'],
-    ['Pinocho', 'Blancanieves', 'Fantasía', 'Dumbo']    
+    ['a. Romans Go Home', 'b. Romani Ite Domum', 'c. Yomate Istis Homem', 'd. Romani Itei Domus'],
+    ['a. Martin Scorsese', 'b. Steven Spielberg', 'c. Quentin Tarantino', 'd. James Cameron'],
+    ['a. Hombre del espacio de Plutón', 'b. Un viaje en el tiempo', 'c. El hombre afortunado', 'd. Viajeros en el tiempo de Hill Valley'],
+    ['a. RoboCop', 'b. Terminator', 'c. Predator 2', 'd. Blade Runner'],
+    ['a. Los barcos largos', 'b. Los vikingos', 'c. Espartaco', 'd. Príncipe Valiente'],
+    ['a. Arenosa', 'b. Perla', 'c. Coral', 'd. Leia'],
+    ['a. 13 de julio de 2015', 'b. 20 de julio de 2015.', 'c. 25 de enero de 2015', 'd. 21 de octubre de 2015'],
+    ['a. Michael Keaton', 'b. Val Kilmer', 'c. Christian Bale', 'd. George Clooney'],
+    ['a. Steve Buscemi', 'b. Benicio Del Toro', 'c. Gabriel Byrne', 'd. Kevin Spacey'],
+    ['a. Pinocho', 'b. Blancanieves', 'c. Fantasía', 'd. Dumbo']    
 ]
 respuestas_peliculas = ["b", "c", "a", "a", "b", "c", "d", "d", "a", "b"]
 
@@ -65,7 +65,7 @@ puntos = []
 jugadores = []
 CATEGORIAS = [deportes, musica, historia, peliculas]
 
-CANTIDAD_PREGUNTAS = 3
+CANTIDAD_PREGUNTAS = 5
 MAX_JUGADORES = 5
 CAT_RANDOM = len(CATEGORIAS) + 1 # Opción a seleccionar para que la categoria sea random
 
@@ -143,14 +143,14 @@ def jugar(indexCategoria,jugadores,puntos):
     respuestas = obtenerRespuestas(indexCategoria)
 
     print('--------------------------------------------------')
-    print("Categoria:",NOMBRES_CATEGORIAS[indexCategoria - 1])
+    print("Categoría:",NOMBRES_CATEGORIAS[indexCategoria - 1])
 
     while contador < CANTIDAD_PREGUNTAS:
         print('--------------------------------------------------')
         print(CATEGORIAS[indexCategoria - 1][contador]) #Imprime la pregunta
         imprimirOpciones(opciones[contador]) #Imprime las opciones
 
-        respuesta = input("Elige una de las opciones (a,b,c,d): ")
+        respuesta = input("Elige una de las opciones (a, b, c, d): ")
 
         while not validar(respuesta,['a','b','c','d']):
             respuesta = input("Opción incorrecta, intente nuevamente: ")
@@ -185,17 +185,19 @@ def mostrarPuntaje(jugadores,puntos):
                 jugadores[i] = aux
 
     print()
-    print("Tabla de posiciones:")
+    print("Tabla de posiciones:")   
 
     for i in range(len(jugadores)):
         print((i + 1),"-",jugadores[i],"con",puntos[i],"puntos")
+    print()
 
 
 #Programa principal
 continuar = True
 while continuar:
     print()
-    print("Bienvenido/a a T.P.O (Trivia Program Online). Puedes elegir una de cuatro categorías temáticas o dejar que el juego escoja una al azar.")
+    print("Bienvenido a T.P.O (Trivia Program Online)")
+    print("Puedes elegir una de cuatro categorías temáticas o dejar que el juego escoja una al azar")
 
     inicializarJugador(jugadores)
 
