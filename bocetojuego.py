@@ -30,13 +30,20 @@ opciones_musica = [
 ]
 respuestas_musica = ["b", "c", "d", "d", "c", "a", "c", "b", "d", "a"]
 
-historia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
+historia = ['1. ¿Cómo era más conocido William Frederick Cody?', '2. ¿Quién fue el presidente de Argentina en 1939?', '3. ¿Dónde se libró la Segunda Guerra Bóer en 1899?', '4. ¿Cuándo empezó la Guerra de la Independencia contra el imperio francés?', '5. ¿Cómo se llamaba la operación ofensiva alemana realizada en octubre de 1941 para tomar Moscú antes del invierno?', '6. ¿En 1939, Gran Bretaña y Francia declararon la guerra a Alemania después de invadir qué país?', '7. ¿Cuántas veces se casó Albert Einstein en su vida?', '8. ¿Cuándo comenzó la Revolución Francesa?', '9. ¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?', '10. ¿En qué año se fundó Canadá?']
 opciones_historia = [
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"]
+    ['a. Billy The Kid', 'b. Buffalo Bill', 'c. Pawnee Bill', 'd. Wild Bill Hickok'],
+    ['Roberto Marcelino Ortiz', 'Agustín Pedro Justo', 'Hipólito Yrigoyen', 'Ramón Castillo'],
+    ['Argentina', 'Nepal', 'Bulgaria', 'Sudáfrica'],
+    ['1808', '1810', '1809', '1806'],
+    ['Operación Girasol', 'Operación Barbarroja', 'Case Blue', 'Operación Typhoon'],
+    ['Estonia', 'Austria', 'Polonia', 'Hungría'],
+    ['Cinco veces', 'Dos veces', 'Una vez', 'Tres veces'],
+    ['1789', '1756', '1799', '1823'],
+    ['1775', '1774', '1777', '1776'],
+    ['1798', '1867', '1668', '1859']    
 ]
-respuestas_historia = ["a","b","c"]
+respuestas_historia = ["b", "a", "d", "a", "d", "c", "b", "a", "d", "b"]
 
 tecnologia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
 opciones_tecnologia = [
