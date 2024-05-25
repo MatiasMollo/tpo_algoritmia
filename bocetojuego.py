@@ -10,25 +10,25 @@ respuestas_deportes = ["c", "b", "a"]
 
 musica = ["Pregunta 1","Pregunta 2","Pregunta 3"]
 opciones_musica = [
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"]
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"]
 ]
 respuestas_musica = ["a","b","c"]
 
 historia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
 opciones_historia = [
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"]
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"]
 ]
 respuestas_historia = ["a","b","c"]
 
 tecnologia = ["Pregunta 1","Pregunta 2","Pregunta 3"]
 opciones_tecnologia = [
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"],
-    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "Opción 4"]
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"],
+    ["a. Opción 1", "b. Opción 2", "c. Opción 3", "d. Opción 4"]
 ]
 respuestas_tecnologia = ["a","b","c"]
 
@@ -42,13 +42,10 @@ MAX_JUGADORES = 5
 CAT_RANDOM = len(CATEGORIAS) + 1 # Opción a seleccionar para que la categoria sea random
 
 
-#* Pasear a los jugadores por varias categorias, mostrar cuantos puntos sacaron en cada una
-#* La respuesta a la pregunta puede estar en la última posicion de las opciones, para tener menos arrays
-#* Las preguntas se pueden suprimir de los arrays a nivel local para que no se repitan y mostrarse de forma aleatoria
-
-
 #Crea un nuevo jugador y agrega su posición para calcular el puntaje, verifica que el nombre de usuario no se repita
 def inicializarJugador(jugadores):
+    print()
+    print("Jugador",len(jugadores) + 1)
     ocupado = True
     while ocupado:
         ocupado = False
@@ -59,7 +56,6 @@ def inicializarJugador(jugadores):
                 ocupado = True
                 print("Ese nombre de usuario ya está en uso.")
 
-    print("Jugador",len(jugadores) + 1)
     jugadores.append(nombre)
     puntos.append(0)
     print()
@@ -118,11 +114,11 @@ def jugar(indexCategoria,jugadores,puntos):
     opciones = obtenerOpciones(indexCategoria)
     respuestas = obtenerRespuestas(indexCategoria)
 
-    print()
+    print('--------------------------------------------------')
     print("Categoria:",NOMBRES_CATEGORIAS[indexCategoria - 1])
-    print()
 
     while contador < CANTIDAD_PREGUNTAS:
+        print('--------------------------------------------------')
         print(CATEGORIAS[indexCategoria - 1][contador]) #Imprime la pregunta
         imprimirOpciones(opciones[contador]) #Imprime las opciones
 
@@ -131,7 +127,7 @@ def jugar(indexCategoria,jugadores,puntos):
         while not validar(respuesta,['a','b','c','d']):
             respuesta = input("Opción incorrecta, intente nuevamente: ")
             
-        print()
+        print('--------------------------------------------------')
 
         if respuesta == respuestas[contador]:
             print("Respuesta correcta")
