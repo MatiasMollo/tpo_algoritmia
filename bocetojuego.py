@@ -65,7 +65,7 @@ puntos = []
 jugadores = []
 CATEGORIAS = [deportes, musica, historia, peliculas]
 
-CANTIDAD_PREGUNTAS = len(deportes)
+CANTIDAD_PREGUNTAS = 5
 MAX_JUGADORES = 5
 CAT_RANDOM = len(CATEGORIAS) + 1 # Opción a seleccionar para que la categoria sea random
 
@@ -125,20 +125,52 @@ def obtenerOpciones(categoria):
     return preguntas
 
 #Valida que el input esté en alguno de los valores del array
-def validar(input, array):
+def validar(input, control_categorias):
     validado = False
     i = 0
 
-    while not validado and i < len(array):
-        if(array[i] == input):
+    while not validado and i < len(control_categorias):
+        if(control_categorias[i] == input):
             validado = True
         i += 1
 
     return validado
 
+#Cree esta función
+def crear_indices_random(CANTIDAD_PREGUNTAS):
+    total_indices = 9
+    lista_random = []
+    lista_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    for i in range(CANTIDAD_PREGUNTAS):
+        numero_random = random.randint(0,total_indices)
+        lista_random.append(lista_indices[numero_random])
+        del lista_indices[numero_random]
+        total_indices -= 1
+    return lista_random
+
+
+#Cree esta función
+def asignar_random(categoria, control_categorias):
+    indice = random.randint(0, len(control_categorias) - 1)
+    while control_categorias[indice] == CAT_RANDOM:
+        indice = random.randint(0, len(control_categorias) - 1)
+    categoria = control_categorias[indice]
+    return categoria
+
+#Cree esta función
+def controlarCategorias(categoria, control_categorias):
+    i = 0
+    while i < len(control_categorias) and control_categorias[i] != categoria:
+        i += 1          
+    if categoria == control_categorias[i]:
+        del control_categorias[i]
+    return control_categorias
+
 
 def jugar(indexCategoria,jugadores,puntos):
     contador = 0
+    #Agregué esta línea
+    lista_random = crear_indices_random(CANTIDAD_PREGUNTAS)
     opciones = obtenerOpciones(indexCategoria)
     respuestas = obtenerRespuestas(indexCategoria)
 
@@ -147,8 +179,8 @@ def jugar(indexCategoria,jugadores,puntos):
 
     while contador < CANTIDAD_PREGUNTAS:
         print('--------------------------------------------------')
-        print(CATEGORIAS[indexCategoria - 1][contador]) #Imprime la pregunta
-        imprimirOpciones(opciones[contador]) #Imprime las opciones
+        print(CATEGORIAS[indexCategoria - 1][(lista_random[contador])]) #Imprime la pregunta, Cambié el contador
+        imprimirOpciones(opciones[(lista_random[contador])]) #Imprime las opciones, Cambié el contador
 
         respuesta = input("Elige una de las opciones (a, b, c, d): ")
 
@@ -157,7 +189,7 @@ def jugar(indexCategoria,jugadores,puntos):
             
         print('--------------------------------------------------')
 
-        if respuesta == respuestas[contador]:
+        if respuesta == respuestas[(lista_random[contador])]:#Cambié el contador
             print("Respuesta correcta")
             puntos[len(jugadores) - 1] += 1
         else:
@@ -196,23 +228,37 @@ def mostrarPuntaje(jugadores,puntos):
 continuar = True
 while continuar:
     print()
-    print("Bienvenido a T.P.O (Trivia Program Online)")
-    print("Puedes elegir una de cuatro categorías temáticas o dejar que el juego escoja una al azar")
+    print("Bienvenido a T.P.O (Trivia Program Online).")
+    print()
+    print("Tendrás que responder preguntas en cuatro categorías temáticas para completar el juego. En cada ronda podrás elegir la categoría que deseas enfrentar en ese momento o dejar que el sistema escoja una al azar.")
 
     inicializarJugador(jugadores)
 
-    print("Tendrás", CANTIDAD_PREGUNTAS ,"preguntas para responder. ¡Mucha suerte!")
+    print("Tendrás cinco preguntas para responder. ¡Mucha suerte!")
+    print()
 
-    imprimirOpciones(["1. Deportes",'2. Música','3. Historia','4. Películas','5. Selección al azar'])
-    categoria = int(input("Ingresa tu opción: "))
+    #Cree estas variables
+    contador_categorias = 0
+    control_categorias = [1, 2, 3, 4, 5]
 
-    while not validar(categoria,[1,2,3,4,5]):
-        categoria = int(input("Opción incorrecta, intente nuevamente: "))
+    #Cree este ciclo
+    while contador_categorias < len(CATEGORIAS):
+        #Sumé este print
+        print('--------------------------------------------------')
+        imprimirOpciones(["1. Deportes",'2. Música','3. Historia','4. Películas','5. Selección al azar'])
+        categoria = int(input("Ingresa tu opción: "))
 
-    if categoria == CAT_RANDOM:
-        categoria = random.randint(1,len(CATEGORIAS))
+        while not validar(categoria, control_categorias):
+            categoria = int(input("Opción incorrecta, intente nuevamente: "))
 
-    jugar(categoria,jugadores,puntos)
+        if categoria == CAT_RANDOM:
+            categoria = asignar_random(categoria, control_categorias)
+
+        jugar(categoria,jugadores,puntos)
+        
+        #Sumé estas líneas, será otra función para controlar categorías restantes
+        control_categorias = controlarCategorias(categoria, control_categorias)             
+        contador_categorias +=1
 
     if len(jugadores) < MAX_JUGADORES:
         if int(input("¿Desea ingresar otro jugador? Presione 1: ")) != 1:
