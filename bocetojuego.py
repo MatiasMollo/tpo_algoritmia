@@ -114,15 +114,15 @@ def obtenerRespuestas(categoria):
 #Devuelve el array de opciones según la categoria ingresada
 def obtenerOpciones(categoria):
     if categoria == 1:
-        preguntas = opciones_deportes
+        opciones = opciones_deportes
     elif categoria == 2:
-        preguntas = opciones_musica
+        opciones = opciones_musica
     elif categoria == 3:
-        preguntas = opciones_historia
+        opciones = opciones_historia
     else:
-        preguntas = opciones_peliculas
+        opciones = opciones_peliculas
     
-    return preguntas
+    return opciones
 
 #Valida que el input esté en alguno de los valores del array
 def validar(input, control_categorias):
@@ -136,11 +136,13 @@ def validar(input, control_categorias):
 
     return validado
 
-#Cree esta función
+#Genera lista de indices
 def crear_indices_random(CANTIDAD_PREGUNTAS):
-    total_indices = 9
+    lista_indices = []
+    for i in range(CANTIDAD_PREGUNTAS):
+        lista_indices.append(i)    
+    total_indices = CANTIDAD_PREGUNTAS - 1
     lista_random = []
-    lista_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     for i in range(CANTIDAD_PREGUNTAS):
         numero_random = random.randint(0,total_indices)
         lista_random.append(lista_indices[numero_random])
@@ -160,7 +162,8 @@ def asignar_random(categoria, control_categorias):
 #Cree esta función
 def controlarCategorias(categoria, control_categorias):
     i = 0
-    while i < len(control_categorias) and control_categorias[i] != categoria:
+    largo = len(control_categorias)
+    while i < largo and control_categorias[i] != categoria:
         i += 1          
     if categoria == control_categorias[i]:
         del control_categorias[i]
@@ -179,8 +182,8 @@ def jugar(indexCategoria,jugadores,puntos):
 
     while contador < CANTIDAD_PREGUNTAS:
         print('--------------------------------------------------')
-        print(CATEGORIAS[indexCategoria - 1][(lista_random[contador])]) #Imprime la pregunta, Cambié el contador
-        imprimirOpciones(opciones[(lista_random[contador])]) #Imprime las opciones, Cambié el contador
+        print(CATEGORIAS[indexCategoria - 1][(lista_random[contador])]) #Imprime la pregunta recorriendo los índices de la lista random, y con el mismo contador mantiene el orden hasta el final 
+        imprimirOpciones(opciones[(lista_random[contador])]) #Imprime las opciones correspondientes a la pregunta random, con el mismo contador hasta el final
 
         respuesta = input("Elige una de las opciones (a, b, c, d): ")
 
@@ -189,7 +192,7 @@ def jugar(indexCategoria,jugadores,puntos):
             
         print('--------------------------------------------------')
 
-        if respuesta == respuestas[(lista_random[contador])]:#Cambié el contador
+        if respuesta == respuestas[(lista_random[contador])]:#Revisa las respuestas correspondientes a la pregunta random, con el mismo contador
             print("Respuesta correcta")
             puntos[len(jugadores) - 1] += 1
         else:
