@@ -125,12 +125,12 @@ def obtenerOpciones(categoria):
     return opciones
 
 #Valida que el input esté en alguno de los valores del array
-def validar(input, control_categorias):
+def validar(input, lista):
     validado = False
     i = 0
 
-    while not validado and i < len(control_categorias):
-        if(control_categorias[i] == input):
+    while not validado and i < len(lista):
+        if(lista[i] == input):
             validado = True
         i += 1
 
