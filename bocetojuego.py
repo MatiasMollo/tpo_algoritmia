@@ -1,6 +1,6 @@
 import random
 
-deportes = ['1. ¿Quién fue el máximo goleador del Mundial Italia 1990?', '2. ¿Cuántos Balones de Oro ha ganado Lionel Messi?', '3. ¿Cuántos anillos de campeón logró Michael Jordan en la NBA?', '4. ¿A quién le pertenece el récord de más victorias en el Masters de Augusta de golf?', '5. ¿Qué equipo ha ganado más Stanley Cups en la NHL?', '6. ¿Quién ganó el Campeonato Mundial de Pilotos de Fórmula 1 2016?', '7. ¿En qué año los New Orleans Saints ganaron el Super Bowl?', '8. ¿Quién es el jugador japonés con más hits de por vida en la MLB?', '9. ¿Cuántos Abiertos de Francia ganó Björn Borg?', '10. ¿Quién es el máximo goleador de la selección de fútbol de Inglaterra?']
+deportes = ['¿Quién fue el máximo goleador del Mundial Italia 1990?', '¿Cuántos Balones de Oro ha ganado Lionel Messi?', '¿Cuántos anillos de campeón logró Michael Jordan en la NBA?', '¿A quién le pertenece el récord de más victorias en el Masters de Augusta de golf?', '¿Qué equipo ha ganado más Stanley Cups en la NHL?', '¿Quién ganó el Campeonato Mundial de Pilotos de Fórmula 1 2016?', '¿En qué año los New Orleans Saints ganaron el Super Bowl?', '¿Quién es el jugador japonés con más hits de por vida en la MLB?', '¿Cuántos Abiertos de Francia ganó Björn Borg?', '¿Quién es el máximo goleador de la selección de fútbol de Inglaterra?']
 opciones_deportes = [
     ['a. Gaetano Scirea', 'b. Hristo Stoichkov', 'c. Salvatore Schillaci', 'd. Neymar'],
     ['a. 9', 'b. 8', 'c. 7', 'd. 4'], 
@@ -15,7 +15,7 @@ opciones_deportes = [
 ]
 respuestas_deportes = ['c', 'b', 'a', 'a', 'd', 'd', 'd', 'c', 'd', 'b']
 
-musica = ['1. ¿"Unison" de Björk contiene una muestra de qué canción de Oval?', '2. ¿Artis Leon Ivey Jr. es más conocido como qué artista de rap?', '3. ¿Cuál fue el álbum debut de Rage Against the Machine?', '4. ¿Qué banda grabó el álbum "Parallel Lines"?', '5. ¿Quién es el letrista principal de la banda canadiense de rock progresivo Rush?', '6. ¿Cuál es el nombre artístico de la cantante neozelandesa Phillipa "Pip" Brown?', '7. ¿Cuántas cuerdas hay en un violonchelo?', '8. ¿Con qué famoso guitarrista colaboró Pete Townshend para un evento en la Academia Brixton en 1985?', '9. ¿"Drink the Sea" es un álbum de qué artista de música electrónica?', '10. En 2006, ¿qué banda lanzó su álbum debut "A Fever You Can’t Sweat Out"?']
+musica = ['¿"Unison" de Björk contiene una muestra de qué canción de Oval?', '¿Artis Leon Ivey Jr. es más conocido como qué artista de rap?', '¿Cuál fue el álbum debut de Rage Against the Machine?', '¿Qué banda grabó el álbum "Parallel Lines"?', '¿Quién es el letrista principal de la banda canadiense de rock progresivo Rush?', '¿Cuál es el nombre artístico de la cantante neozelandesa Phillipa "Pip" Brown?', '¿Cuántas cuerdas hay en un violonchelo?', '¿Con qué famoso guitarrista colaboró Pete Townshend para un evento en la Academia Brixton en 1985?', '¿"Drink the Sea" es un álbum de qué artista de música electrónica?', 'En 2006, ¿qué banda lanzó su álbum debut "A Fever You Can’t Sweat Out"?']
 opciones_musica = [
     ['a. Textuell', 'b. Aero Deck', 'c. do while', 'd. Panoramic'],
     ['a. Dr. Dre', 'b. Snoop Dogg', 'c. Coolio', 'd. Lil Wayne'],
@@ -30,7 +30,7 @@ opciones_musica = [
 ]
 respuestas_musica = ["b", "c", "d", "d", "c", "a", "c", "b", "d", "a"]
 
-historia = ['1. ¿Cómo era más conocido William Frederick Cody?', '2. ¿Quién fue el presidente de Argentina en 1939?', '3. ¿Dónde se libró la Segunda Guerra Bóer en 1899?', '4. ¿Cuándo empezó la Guerra de la Independencia contra el imperio francés?', '5. ¿Cómo se llamaba la operación ofensiva alemana realizada en octubre de 1941 para tomar Moscú antes del invierno?', '6. ¿En 1939, Gran Bretaña y Francia declararon la guerra a Alemania después de invadir qué país?', '7. ¿Cuántas veces se casó Albert Einstein en su vida?', '8. ¿Cuándo comenzó la Revolución Francesa?', '9. ¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?', '10. ¿En qué año se fundó Canadá?']
+historia = ['¿Cómo era más conocido William Frederick Cody?', '¿Quién fue el presidente de Argentina en 1939?', '¿Dónde se libró la Segunda Guerra Bóer en 1899?', '¿Cuándo empezó la Guerra de la Independencia contra el imperio francés?', '¿Cómo se llamaba la operación ofensiva alemana realizada en octubre de 1941 para tomar Moscú antes del invierno?', '¿En 1939, Gran Bretaña y Francia declararon la guerra a Alemania después de invadir qué país?', '¿Cuántas veces se casó Albert Einstein en su vida?', '¿Cuándo comenzó la Revolución Francesa?', '¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?', '¿En qué año se fundó Canadá?']
 opciones_historia = [
     ['a. Billy The Kid', 'b. Buffalo Bill', 'c. Pawnee Bill', 'd. Wild Bill Hickok'],
     ['a. Roberto Marcelino Ortiz', 'b. Agustín Pedro Justo', 'c. Hipólito Yrigoyen', 'd. Ramón Castillo'],
@@ -45,7 +45,7 @@ opciones_historia = [
 ]
 respuestas_historia = ["b", "a", "d", "a", "d", "c", "b", "a", "d", "b"]
 
-peliculas = ['1. ¿Cuál es la frase correcta para el dicho latino "Romanes Eunt Domus" en "La Vida de Brian" de Monty Python?', '2. ¿Quién dirigió las películas "Pulp Fiction", "Reservoir Dogs" y "Django Unchained"?', '3. ¿Cuál fue otro nombre sugerido para la película de 1985 "Regreso al Futuro"?', '4. ¿Cuál de estas películas NO está ambientada en Los Ángeles?', '5. ¿Qué película de 1958 fue protagonizada por Kirk Douglas y Tony Curtis como los medio hermanos Einar y Eric?', '6. En "Buscando a Nemo", ¿cómo se llamaba la madre de Nemo?', '7. En "Regreso al Futuro II", ¿a qué fecha futura acuden Marty y el Dr. Emmett Brown?', '8. ¿Quién interpretó a Batman en la película de 1997 "Batman and Robin"?', '9. ¿Cuál de los siguientes actores no desempeña un papel en la película "The Usual Suspects"?', '10. ¿Cuál es la película más antigua de Disney?']
+peliculas = ['¿Cuál es la frase correcta para el dicho latino "Romanes Eunt Domus" en "La Vida de Brian" de Monty Python?', '¿Quién dirigió las películas "Pulp Fiction", "Reservoir Dogs" y "Django Unchained"?', '¿Cuál fue otro nombre sugerido para la película de 1985 "Volver al Futuro"?', '¿Cuál de estas películas NO está ambientada en Los Ángeles?', '¿Qué película de 1958 fue protagonizada por Kirk Douglas y Tony Curtis como los medio hermanos Einar y Eric?', 'En "Buscando a Nemo", ¿cómo se llamaba la madre de Nemo?', 'En "Volver al Futuro II", ¿a qué fecha futura acuden Marty y el Dr. Emmett Brown?', '¿Quién interpretó a Batman en la película de 1997 "Batman and Robin"?', '¿Cuál de los siguientes actores no desempeña un papel en la película "The Usual Suspects"?', '¿Cuál es la película más antigua de Disney?']
 opciones_peliculas = [
     ['a. Romans Go Home', 'b. Romani Ite Domum', 'c. Yomate Istis Homem', 'd. Romani Itei Domus'],
     ['a. Martin Scorsese', 'b. Steven Spielberg', 'c. Quentin Tarantino', 'd. James Cameron'],
