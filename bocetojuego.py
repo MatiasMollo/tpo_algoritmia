@@ -239,6 +239,7 @@ def mostrarPuntaje(jugadores,puntos):
 #Programa principal
 continuar = True
 while continuar:
+    print('--------------------------------------------------')
     print()
     print("Bienvenido a T.P.O (Trivia Program Online).")
     print()
@@ -270,7 +271,10 @@ while continuar:
         contador_categorias +=1
 
     if len(jugadores) < MAX_JUGADORES:
-        if int(input("¿Desea ingresar otro jugador? Presione 1: ")) != 1:
+        seguir = int(input("¿Desea ingresar otro jugador? Presione 1 para ingresarlo o presione 2 para terminar el juego: "))
+        while seguir != 1 and seguir != 2:
+            seguir = int(input("Por favor, indique la opción correcta. Presione 1 para ingresarlo o presione 2 para terminar el juego: "))
+        if seguir == 2:
             continuar = False
     else:
         print("Han llegado al máximo de jugadores para esta partida")
