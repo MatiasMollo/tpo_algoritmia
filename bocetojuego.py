@@ -89,8 +89,6 @@ def inicializarJugador(jugadores):
     puntos.append(0)
     print()
 
-
-
 #Imprime una opción abajo de la otra
 def imprimirOpciones(array):
     print()
@@ -98,6 +96,16 @@ def imprimirOpciones(array):
         print(array[i])
     print()
 
+#Imprime una categoría a la vez entre las que están disponibles
+def imprimirCategorias(control_categorias):
+    strings_categorias = ["", "1. Deportes", "2. Música", "3. Historia", "4. Películas", "5. Selección al azar"]
+    for i in range(1, len(strings_categorias)):
+        contador = 0
+        while contador < len(control_categorias) and i != control_categorias[contador]:
+            contador += 1
+        if contador < len(control_categorias):
+            print(strings_categorias[i])
+    print()
 
 #Devuelve las respuestas (array) según la categoria correspondiente
 def obtenerRespuestas(categoria):
@@ -247,7 +255,7 @@ while continuar:
     #Ciclo de cada jugador
     while contador_categorias < len(CATEGORIAS):
         print('--------------------------------------------------')
-        imprimirOpciones(["1. Deportes",'2. Música','3. Historia','4. Películas','5. Selección al azar'])
+        imprimirCategorias(control_categorias)
         categoria = int(input("Ingresa tu opción: "))
 
         while not validar(categoria, control_categorias):
