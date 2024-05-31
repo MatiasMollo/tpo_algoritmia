@@ -247,7 +247,7 @@ while continuar:
 
     inicializarJugador(jugadores)
 
-    print("Tendrás cinco preguntas para responder. ¡Mucha suerte!")
+    print("Tendrás", CANTIDAD_PREGUNTAS ,"preguntas para responder. ¡Mucha suerte!")
     print()
 
     contador_categorias = 0
@@ -258,7 +258,7 @@ while continuar:
         print('--------------------------------------------------')
         imprimirCategorias(control_categorias)
         categoria = int(input("Ingresa tu opción: "))
-
+        
         while not validar(categoria, control_categorias):
             categoria = int(input("Opción incorrecta, intente nuevamente: "))
 
