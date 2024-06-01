@@ -146,7 +146,7 @@ def validar(input, lista):
     return validado
 
 #Genera lista de indices random para las preguntas a mostrar
-def crear_indices_random(CANTIDAD_PREGUNTAS, TOTAL_PREGUNTAS):
+def crearIndicesRandom(CANTIDAD_PREGUNTAS, TOTAL_PREGUNTAS):
     lista_random = []
     contador = 0
     while contador < CANTIDAD_PREGUNTAS:
@@ -161,7 +161,7 @@ def crear_indices_random(CANTIDAD_PREGUNTAS, TOTAL_PREGUNTAS):
 
 
 #Verifica que al usar la opción random se elija una categoría disponible
-def asignar_random(categoria, control_categorias):
+def asignarRandom(categoria, control_categorias):
     indice = random.randint(0, len(control_categorias) - 1)
     while control_categorias[indice] == CAT_RANDOM:
         indice = random.randint(0, len(control_categorias) - 1)
@@ -182,7 +182,7 @@ def controlarCategorias(categoria, control_categorias):
 def jugar(indexCategoria,jugadores,puntos):
     contador = 0
     #Agregué esta línea
-    lista_random = crear_indices_random(CANTIDAD_PREGUNTAS, TOTAL_PREGUNTAS)
+    lista_random = crearIndicesRandom(CANTIDAD_PREGUNTAS, TOTAL_PREGUNTAS)
     opciones = obtenerOpciones(indexCategoria)
     respuestas = obtenerRespuestas(indexCategoria)
 
@@ -247,7 +247,7 @@ while continuar:
 
     inicializarJugador(jugadores)
 
-    print("Tendrás", CANTIDAD_PREGUNTAS ,"preguntas para responder. ¡Mucha suerte!")
+    print("Tendrás", CANTIDAD_PREGUNTAS, "preguntas para responder. ¡Mucha suerte!")
     print()
 
     contador_categorias = 0
@@ -263,7 +263,7 @@ while continuar:
             categoria = int(input("Opción incorrecta, intente nuevamente: "))
 
         if categoria == CAT_RANDOM:
-            categoria = asignar_random(categoria, control_categorias)
+            categoria = asignarRandom(categoria, control_categorias)
 
         jugar(categoria,jugadores,puntos)
         
