@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Matias"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-05-25 02:29:52 p.&#160;m."/>
+        <attribute name="saved" value="2024-05-26 05:37:07 p.&#160;m."/>
         <attribute name="created" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTIxOzA0OjQ3OjA1IHAuwqBtLjszMjA3"/>
-        <attribute name="edited" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTI1OzAyOjI5OjUyIHAuwqBtLjsxMDszMzY3"/>
+        <attribute name="edited" value="TWF0aWFzO0RFU0tUT1AtNEcwQjc4STsyMDI0LTA1LTI2OzA1OjM3OjA3IHAuwqBtLjsxMTszMzcx"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -20,11 +20,11 @@
             <declare name="historia" type="String" array="True" size="10"/>
             <declare name="opciones_historia" type="String" array="True" size="10"/>
             <declare name="respuestas_historia" type="String" array="True" size="10"/>
-            <declare name="tecnologia" type="String" array="True" size="10"/>
-            <declare name="opciones_tecnologia" type="String" array="True" size="10"/>
-            <declare name="respuestas_tecnologia" type="String" array="True" size="10"/>
+            <declare name="peliculas" type="String" array="True" size="10"/>
+            <declare name="opciones_peliculas" type="String" array="True" size="10"/>
+            <declare name="respuestas_peliculas" type="String" array="True" size="10"/>
             <declare name="NOMBRES_CATEGORIAS" type="String" array="True" size="4"/>
-            <assign variable="NOMBRES_CATEGORIAS" expression="[&quot;Deportes&quot;,&quot;Musica&quot;,&quot;Historia&quot;,&quot;Tecnologia&quot;]"/>
+            <assign variable="NOMBRES_CATEGORIAS" expression="[&quot;Deportes&quot;,&quot;Musica&quot;,&quot;Historia&quot;,&quot;Peliculas&quot;]"/>
             <declare name="MAX_JUGADORES" type="Integer" array="False" size=""/>
             <assign variable="MAX_JUGADORES" expression="5"/>
             <declare name="puntos" type="Integer" array="True" size="MAX_JUGADORES"/>
