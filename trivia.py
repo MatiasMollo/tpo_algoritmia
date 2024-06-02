@@ -181,7 +181,6 @@ def controlarCategorias(categoria, control_categorias):
 
 def jugar(indexCategoria,jugadores,puntos):
     contador = 0
-    #Agregué esta línea
     lista_random = crearIndicesRandom(CANTIDAD_PREGUNTAS, TOTAL_PREGUNTAS)
     opciones = obtenerOpciones(indexCategoria)
     respuestas = obtenerRespuestas(indexCategoria)
